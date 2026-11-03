@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+sqlalchemy
+psycopg[binary]
+python-multipart
+pymupdf
+python-docx
+langchain-core
+langchain-openai
+pytest
+httpx
