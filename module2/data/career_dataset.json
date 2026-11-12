@@ -1,0 +1,433 @@
+
+{
+  "careers": [
+    {
+      "career_id": "data_scientist",
+      "title": "Data Scientist",
+      "description": "Analyzes data and builds statistical and machine learning models to solve business problems.",
+      "required_skills": [
+        {"name": "Python", "weight": 5},
+        {"name": "SQL", "weight": 4},
+        {"name": "Statistics", "weight": 5},
+        {"name": "Data Analysis", "weight": 5},
+        {"name": "Machine Learning", "weight": 5},
+        {"name": "Pandas", "weight": 4},
+        {"name": "NumPy", "weight": 3},
+        {"name": "Data Visualization", "weight": 3}
+      ],
+      "optional_skills": [
+        "Deep Learning",
+        "Scikit-learn",
+        "Power BI",
+        "TensorFlow"
+      ],
+      "relevant_project_keywords": [
+        "data analysis",
+        "data cleaning",
+        "exploratory data analysis",
+        "statistical analysis",
+        "predictive modeling",
+        "churn prediction",
+        "feature engineering",
+        "feature selection",
+        "model evaluation"
+      ],
+      "relevant_experience_keywords": [
+        "data science",
+        "data analysis",
+        "machine learning",
+        "statistics",
+        "predictive modeling",
+        "deep learning"
+      ],
+      "relevant_education_fields": [
+        "data science",
+        "statistics",
+        "computer science",
+        "artificial intelligence"
+      ],
+      "career_direction_keywords": [
+        "data scientist",
+        "data science",
+        "statistical analysis",
+        "predictive modeling"
+      ]
+    },
+    {
+      "career_id": "machine_learning_engineer",
+      "title": "Machine Learning Engineer",
+      "description": "Develops, trains, deploys, and maintains machine learning models.",
+      "required_skills": [
+        {"name": "Python", "weight": 5},
+        {"name": "Machine Learning", "weight": 5},
+        {"name": "Scikit-learn", "weight": 4},
+        {"name": "Deep Learning", "weight": 4},
+        {"name": "SQL", "weight": 3},
+        {"name": "NumPy", "weight": 3},
+        {"name": "Pandas", "weight": 3},
+        {"name": "APIs", "weight": 3}
+      ],
+      "optional_skills": [
+        "TensorFlow",
+        "PyTorch",
+        "Docker",
+        "FastAPI",
+        "MLflow"
+      ],
+      "relevant_project_keywords": [
+        "machine learning",
+        "model deployment",
+        "model evaluation",
+        "image classification",
+        "random forest",
+        "xgboost",
+        "keras",
+        "tensorflow",
+        "pytorch",
+        "neural network",
+        "deep learning model"
+      ],
+      "relevant_experience_keywords": [
+        "machine learning",
+        "deep learning",
+        "model development",
+        "model training",
+        "model deployment",
+        "artificial intelligence"
+      ],
+      "relevant_education_fields": [
+        "computer science",
+        "data science",
+        "artificial intelligence",
+        "machine learning"
+      ],
+      "career_direction_keywords": [
+        "machine learning engineer",
+        "machine learning",
+        "deep learning",
+        "model development"
+      ]
+    },
+    {
+      "career_id": "data_analyst",
+      "title": "Data Analyst",
+      "description": "Collects, cleans, analyzes, and visualizes data to support business decisions.",
+      "required_skills": [
+        {"name": "SQL", "weight": 5},
+        {"name": "Excel", "weight": 4},
+        {"name": "Python", "weight": 4},
+        {"name": "Data Cleaning", "weight": 5},
+        {"name": "Data Analysis", "weight": 5},
+        {"name": "Data Visualization", "weight": 4},
+        {"name": "Statistics", "weight": 3}
+      ],
+      "optional_skills": [
+        "Power BI",
+        "Tableau",
+        "Pandas",
+        "NumPy"
+      ],
+      "relevant_project_keywords": [
+        "data analysis",
+        "data cleaning",
+        "data visualization",
+        "sales analysis",
+        "sales data",
+        "sales analytics",
+        "customer behavior",
+        "business insights",
+        "reporting",
+        "data preprocessing",
+        "exploratory data analysis",
+        "statistical analysis"
+      ],
+      "relevant_experience_keywords": [
+        "data analysis",
+        "data cleaning",
+        "data visualization",
+        "reporting",
+        "business analysis",
+        "statistical analysis"
+      ],
+      "relevant_education_fields": [
+        "data science",
+        "computer science",
+        "statistics",
+        "business analytics",
+        "information systems"
+      ],
+      "career_direction_keywords": [
+        "data analyst",
+        "data analytics",
+        "data analysis",
+        "business analysis"
+      ]
+    },
+    {
+      "career_id": "data_engineer",
+      "title": "Data Engineer",
+      "description": "Builds and maintains data pipelines, databases, and data processing infrastructure.",
+      "required_skills": [
+        {"name": "Python", "weight": 4},
+        {"name": "SQL", "weight": 5},
+        {"name": "ETL", "weight": 5},
+        {"name": "Database Management", "weight": 5},
+        {"name": "Data Warehousing", "weight": 4},
+        {"name": "APIs", "weight": 3},
+        {"name": "Git", "weight": 3}
+      ],
+      "optional_skills": [
+        "Apache Spark",
+        "Airflow",
+        "Docker",
+        "PostgreSQL",
+        "Cloud Computing"
+      ],
+      "relevant_project_keywords": [
+        "data pipeline",
+        "etl",
+        "data warehouse",
+        "database management",
+        "database design",
+        "data integration",
+        "data processing",
+        "data storage",
+        "sql database"
+      ],
+      "relevant_experience_keywords": [
+        "data engineering",
+        "database management",
+        "data pipelines",
+        "etl",
+        "data processing",
+        "database development"
+      ],
+      "relevant_education_fields": [
+        "computer science",
+        "data engineering",
+        "information systems",
+        "software engineering"
+      ],
+      "career_direction_keywords": [
+        "data engineer",
+        "data engineering",
+        "data pipelines",
+        "database infrastructure"
+      ]
+    },
+    {
+      "career_id": "ai_engineer",
+      "title": "AI Engineer",
+      "description": "Builds AI-powered applications using machine learning and deep learning technologies.",
+      "required_skills": [
+        {"name": "Python", "weight": 5},
+        {"name": "Machine Learning", "weight": 4},
+        {"name": "Deep Learning", "weight": 5},
+        {"name": "APIs", "weight": 4},
+        {"name": "TensorFlow", "weight": 3},
+        {"name": "SQL", "weight": 3},
+        {"name": "Git", "weight": 2}
+      ],
+      "optional_skills": [
+        "PyTorch",
+        "NLP",
+        "LLMs",
+        "LangChain",
+        "FastAPI"
+      ],
+      "relevant_project_keywords": [
+        "artificial intelligence",
+        "ai application",
+        "machine learning",
+        "deep learning",
+        "image classification",
+        "natural language processing",
+        "nlp",
+        "large language models",
+        "llm",
+        "model deployment",
+        "keras",
+        "tensorflow",
+        "pytorch",
+        "neural network"
+      ],
+      "relevant_experience_keywords": [
+        "artificial intelligence",
+        "machine learning",
+        "deep learning",
+        "ai development",
+        "model deployment",
+        "generative ai",
+        "agentic ai"
+      ],
+      "relevant_education_fields": [
+        "artificial intelligence",
+        "computer science",
+        "data science",
+        "machine learning"
+      ],
+      "career_direction_keywords": [
+        "ai engineer",
+        "artificial intelligence",
+        "generative ai",
+        "machine learning",
+        "deep learning"
+      ]
+    },
+    {
+      "career_id": "backend_developer",
+      "title": "Backend Developer",
+      "description": "Develops server-side applications, APIs, business logic, and database integrations.",
+      "required_skills": [
+        {"name": "Python", "weight": 4},
+        {"name": "APIs", "weight": 5},
+        {"name": "SQL", "weight": 4},
+        {"name": "Database Management", "weight": 4},
+        {"name": "Git", "weight": 3},
+        {"name": "Problem Solving", "weight": 3}
+      ],
+      "optional_skills": [
+        "FastAPI",
+        "Flask",
+        "Django",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "relevant_project_keywords": [
+        "backend",
+        "back-end",
+        "server-side",
+        "api development",
+        "database integration",
+        "database management",
+        "business logic",
+        "authentication",
+        "python backend"
+      ],
+      "relevant_experience_keywords": [
+        "backend development",
+        "api development",
+        "server-side development",
+        "database development",
+        "web development",
+        "software development"
+      ],
+      "relevant_education_fields": [
+        "computer science",
+        "software engineering",
+        "information technology",
+        "information systems"
+      ],
+      "career_direction_keywords": [
+        "backend developer",
+        "backend development",
+        "back-end development",
+        "server-side development"
+      ]
+    },
+    {
+      "career_id": "frontend_developer",
+      "title": "Frontend Developer",
+      "description": "Builds interactive and responsive user interfaces for web applications.",
+      "required_skills": [
+        {"name": "HTML", "weight": 5},
+        {"name": "CSS", "weight": 5},
+        {"name": "JavaScript", "weight": 5},
+        {"name": "Problem Solving", "weight": 3},
+        {"name": "Git", "weight": 2}
+      ],
+      "optional_skills": [
+        "React",
+        "TypeScript",
+        "Responsive Design",
+        "UI/UX"
+      ],
+      "relevant_project_keywords": [
+        "frontend",
+        "front-end",
+        "responsive website",
+        "user interface",
+        "interactive website",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "web interface"
+      ],
+      "relevant_experience_keywords": [
+        "frontend development",
+        "front-end development",
+        "web development",
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "user interface"
+      ],
+      "relevant_education_fields": [
+        "computer science",
+        "software engineering",
+        "information technology"
+      ],
+      "career_direction_keywords": [
+        "frontend developer",
+        "frontend development",
+        "front-end development",
+        "web development",
+        "full stack"
+      ]
+    },
+    {
+      "career_id": "business_intelligence_analyst",
+      "title": "Business Intelligence Analyst",
+      "description": "Transforms business data into dashboards, reports, and insights for decision-making.",
+      "required_skills": [
+        {"name": "SQL", "weight": 5},
+        {"name": "Power BI", "weight": 5},
+        {"name": "Data Analysis", "weight": 5},
+        {"name": "Excel", "weight": 4},
+        {"name": "Data Visualization", "weight": 5},
+        {"name": "Statistics", "weight": 3}
+      ],
+      "optional_skills": [
+        "Python",
+        "Tableau",
+        "Data Warehousing",
+        "Pandas"
+      ],
+      "relevant_project_keywords": [
+        "business intelligence",
+        "power bi",
+        "kpi analysis",
+        "data visualization",
+        "sales performance",
+        "customer behavior",
+        "business reporting",
+        "business insights",
+        "interactive dashboard",
+        "sales analytics"
+      ],
+      "relevant_experience_keywords": [
+        "business intelligence",
+        "power bi",
+        "data visualization",
+        "business analysis",
+        "reporting",
+        "dashboard development"
+      ],
+      "relevant_education_fields": [
+        "business analytics",
+        "data science",
+        "computer science",
+        "information systems",
+        "business intelligence"
+      ],
+      "career_direction_keywords": [
+        "business intelligence analyst",
+        "business intelligence",
+        "data analytics",
+        "business analytics"
+      ]
+    }
+  ]
+}

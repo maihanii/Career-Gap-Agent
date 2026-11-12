@@ -1,0 +1,169 @@
+{
+    "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "C#",
+        "API",
+        ".NET",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Data Cleaning",
+        "Web Scraping",
+        "Data Analysis",
+        "Machine Learning",
+        "Deep Learning",
+        "Communication",
+        "Team Leadership",
+        "Problem Solving"
+    ],
+    "projects": [
+        {
+            "name": "Travel Booking Website",
+            "links": [],
+            "description": "Built a responsive website allowing users to view, search, and book trips.",
+            "technologies": []
+        },
+        {
+            "name": "NASA Dataset Project",
+            "links": [],
+            "description": "Conducted full data cleaning, preprocessing, and model training achieving high accuracy on a complex NASA dataset.",
+            "technologies": []
+        },
+        {
+            "name": "LinkedIn Web Scraping Project",
+            "links": [],
+            "description": "Created a Python scraper to extract job and user data from LinkedIn.",
+            "technologies": [
+                "Python"
+            ]
+        },
+        {
+            "name": "Venue Booking Management System",
+            "links": [],
+            "description": "Developed a full program with an integrated database for managing venue reservations for events.",
+            "technologies": []
+        },
+        {
+            "name": "Image Classification Project",
+            "links": [],
+            "description": "Worked on image dataset preprocessing, model training, and evaluation using Keras. Applied Deep Learning techniques to build a high-performance image classification application.",
+            "technologies": [
+                "Keras"
+            ]
+        },
+        {
+            "name": "FoundIt : Lost & Found Items Website",
+            "links": [],
+            "description": "Developed a full-stack Lost and Found Items web application using HTML, CSS, and JavaScript, with a Python backend and API integration.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Python"
+            ]
+        },
+        {
+            "name": "Sales Data Analytics Dashboard",
+            "links": [],
+            "description": "Created an interactive Power BI dashboard to analyze sales performance and customer behavior.",
+            "technologies": [
+                "Power BI"
+            ]
+        },
+        {
+            "name": "Customer Churn Prediction",
+            "links": [],
+            "description": "Developed an end-to-end ML churn prediction solution using Python. Performed EDA, feature engineering, and feature selection, and compared multiple models including Random Forest and XGBoost, achieving 95% accuracy and 0.92 ROC-AUC.",
+            "technologies": [
+                "Python"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "grade": "GPA: 3.8",
+            "degree": "Bachelor",
+            "end_date": "2027",
+            "start_date": "2023",
+            "institution": "CIC",
+            "field_of_study": "Computer Science (Data Science Major)"
+        }
+    ],
+    "languages": [],
+    "all_skills": [
+        "Python",
+        "Java",
+        "C++",
+        "C#",
+        "API",
+        ".NET",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Data Cleaning",
+        "Web Scraping",
+        "Data Analysis",
+        "Machine Learning",
+        "Deep Learning",
+        "Communication",
+        "Team Leadership",
+        "Problem Solving"
+    ],
+    "experience": [
+        {
+            "company": "Digital Egypt Pioneers Initiative (DEPI)",
+            "end_date": "Dec 2025",
+            "job_title": "Data Science & AI Track",
+            "start_date": "Jul 2025",
+            "responsibilities": [
+                "Intensive, government-sponsored Data Science training program focused on Python, Statistics, Data Analysis, Machine Learning and Deep learning with real life deployment."
+            ]
+        },
+        {
+            "company": "IEEE",
+            "end_date": null,
+            "job_title": "Full Stack Development Course",
+            "start_date": "2025",
+            "responsibilities": [
+                "Completed intensive training in Full Stack web development, covering C#, React, .NET, API integration, HTML, CSS, and JavaScript."
+            ]
+        },
+        {
+            "company": "Google Developer Groups (GDG), Cairo",
+            "end_date": null,
+            "job_title": "Operations & Marketing Team Member",
+            "start_date": "2025",
+            "responsibilities": [
+                "Contributed to organizing community events and promotional campaigns within GDG Cairo."
+            ]
+        }
+    ],
+    "competitions": [],
+    "personal_info": {
+        "name": "Mai Hani Ramadan",
+        "email": "maihaniramadann@gmail.com",
+        "phone": "01154747084",
+        "github": "https://github.com/maihanii",
+        "linkedin": "https://www.linkedin.com/in/mai-hani-ramadan",
+        "location": "Cairo, Egypt"
+    },
+    "certifications": [
+        {
+            "name": "Data Science & AI Certificate",
+            "issuer": "Digital Egypt Pioneers Initiative (DEPI)",
+            "issue_date": "2025"
+        },
+        {
+            "name": "Full Stack Development Certificate",
+            "issuer": "The Way",
+            "issue_date": "2025"
+        }
+    ],
+    "volunteer_work": [],
+    "additional_sections": [],
+    "professional_summary": "Aspiring Data Scientist with a strong background in Machine Learning (ML), Deep Learning, and Big Data, along with Full Stack development. Currently enhancing skills through the Digital Egypt Pioneers Initiative (DEPI) Gen AI and Agentic AI. Passionate about turning raw data into meaningful insights and applying technical and analytical skills in real-world data science projects.",
+    "courses_and_trainings": [],
+    "awards_and_achievements": []
+}

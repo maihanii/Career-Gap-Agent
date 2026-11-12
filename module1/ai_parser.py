@@ -1,111 +1,173 @@
+
+"""AI-powered CV information extraction."""
+
 from langchain_core.messages import SystemMessage, HumanMessage
+
 from schemas import CVSchema
 from llm_setup import llm
 
+
 def parse_cv_with_ai(cv_text: str):
+    """Extract structured information from CV text."""
+
     system_prompt = """
-You are a CV information extraction assistant.
+You are an accurate CV information extraction assistant.
 
-Your task is to extract the main information from a CV and return it
-using the provided CVSchema.
+Extract information from the CV and return it using CVSchema.
 
-Follow these rules:
+GENERAL RULES:
 
-1. Extract only information clearly stated in the CV.
-2. Do not invent, guess, or complete missing information.
-3. For missing string fields, use null.
-4. For missing list fields, use an empty list.
-5. For missing nested objects, use their default empty structure.
-6. Keep the output simple and concise.
-7. Avoid repeating the same information in multiple sections.
-8. Put information in the correct category.
+1. Extract only information explicitly stated in the CV.
+2. Never invent, guess, or assume information.
+3. Do not claim that a person has a skill without evidence in the CV.
+4. Preserve important details from all CV sections.
+5. Do not confuse projects, courses, certificates, and work experience.
+6. Use null for missing string fields.
+7. Use empty lists for missing list fields.
+8. Avoid duplicating information unnecessarily.
+9. Keep the original meaning of the CV.
 
-Extract the following:
+FIELD INSTRUCTIONS:
 
-- personal_info:
-  Name, email, phone, location, LinkedIn, and GitHub.
+personal_info:
+Extract name, email, phone, location, LinkedIn, and GitHub.
 
-- professional_summary:
-  A short summary of the person's background and main interests,
-  only if a summary is provided or clearly supported by the CV.
+professional_summary:
+Extract the professional summary if provided.
+Do not create a new career objective.
 
-- skills:
-  Main technical and professional skills.
+skills:
+Extract the main skills explicitly listed in the CV's Skills section.
+Keep technical and professional skills.
 
-- all_skills:
-  All skills mentioned in the CV, without duplicates.
+all_skills:
+This field is extremely important.
 
-- languages:
-  Languages mentioned in the CV.
+Collect ALL explicitly mentioned technical and professional
+skills from EVERY section of the CV, including:
 
-- education:
-  Degree, field of study, institution, dates, and grade.
+- Skills section
+- Professional summary
+- Education and field of study
+- Experience and responsibilities
+- Courses and training descriptions
+- Certifications
+- Project descriptions and project technologies
+- Additional relevant sections
 
-- experience:
-  Job title, company, dates, and main responsibilities.
-  Include internships and part-time jobs.
+Examples of skills and technologies include:
+Python, Java, C++, C#, JavaScript, HTML, CSS, React,
+.NET, SQL, MySQL, PostgreSQL, APIs, FastAPI, Streamlit,
+Machine Learning, Deep Learning, Statistics, Data Analysis,
+Data Cleaning, Data Visualization, Keras, TensorFlow,
+Scikit-learn, Random Forest, XGBoost, SHAP, MLflow,
+Power BI, Git, and GitHub.
 
-- projects:
-  Project name, short description, technologies, and links.
+These are examples only.
+Extract skills only when supported by the actual CV.
 
-- certifications:
-  Certification name, issuing organization, and issue date.
+IMPORTANT:
+- Include every skill listed in the skills field inside all_skills.
+- Include technologies mentioned in project descriptions.
+- Include technical topics explicitly mentioned in training descriptions.
+- Include skills demonstrated in experience responsibilities.
+- Do not add skills merely because they are related to a project.
+- Do not interpret a technology mention as proof of expertise.
+- Remove duplicate skills.
+- Use standard, commonly used skill names.
+- Keep specific technologies separate when they are different skills.
+  For example, React and JavaScript are two different skills.
 
-- courses_and_trainings:
-  Course or training name, provider, and date.
+languages:
+Extract spoken or written languages explicitly mentioned.
 
-- volunteer_work:
-  Volunteer role, organization, and responsibilities.
-  Include only activities clearly described as volunteering.
+education:
+Extract degree, field of study, institution, dates, and grade.
 
-- awards_and_achievements:
-  Awards, achievements, and recognitions.
+experience:
+Extract actual work experience, job titles, organizations,
+dates, and responsibilities.
 
-- competitions:
-  Competition name, result, and date.
+Do not classify courses or training programs as work experience
+unless the CV explicitly describes them as jobs or internships.
 
-- additional_sections:
-  Extract useful CV information that does not fit into the main categories.
+projects:
+For every project, extract:
 
-  HYPERLINK HANDLING:
+- Project name
+- Description
+- Technologies
+- Links
 
-- The CV text may contain a separate section listing hyperlinks.
-- These hyperlinks may be associated with visible labels such as LinkedIn, GitHub, Portfolio, or Project.
-- Use the actual extracted URL, not the visible label, when filling URL fields.
-- If a LinkedIn hyperlink is provided, put its URL in personal_info.linkedin.
-- If a GitHub hyperlink is provided, put its URL in personal_info.github.
-- Put project-related URLs in the corresponding project's links field.
-- Never invent or guess a URL.
-- If only a label is available without an actual URL, do not treat the label as a URL.
+For technologies:
+- Extract programming languages, frameworks, libraries,
+  platforms, databases, and tools explicitly mentioned
+  in that project's title or description.
+- Do not omit technologies mentioned inside the description.
+- Do not add technologies based on assumptions.
 
-  Keep the original section title and its important content.
-  Examples may include:
-  - Relevant activities
-  - Interests
-  - Personal strengths
-  - Other useful student experiences
+Example:
+If a project description mentions Python, Random Forest,
+XGBoost, SHAP, MLflow, FastAPI, and Streamlit,
+include these technologies in that project's technologies list.
 
-  Include only information relevant to the person's education,
-  skills, or career.
+certifications:
+Extract certification name, issuing organization, and date.
 
-  Do not use this section for information already extracted elsewhere.
-  Do not create extra sections if there is no relevant information.
+courses_and_trainings:
+Extract course or training name, provider, and date.
+Keep the topics and skills from the training in all_skills.
+Do not automatically classify a course as a certification.
 
-Important classification rules:
+volunteer_work:
+Extract only clearly described volunteer activities.
 
-- A course or training is not automatically a certification.
-- A project is not work experience unless the CV describes it as a job.
-- A competition result belongs in competitions.
-- An award or recognition belongs in awards_and_achievements.
-- Do not create categories that are not included in the schema.
-- Ignore unrelated personal details.
+awards_and_achievements:
+Extract awards, achievements, and recognitions.
+
+competitions:
+Extract competition names, results, and dates.
+
+additional_sections:
+Preserve relevant information that does not fit elsewhere.
+Do not duplicate information already extracted.
+
+HYPERLINK HANDLING:
+
+- Use actual extracted URLs, not visible labels.
+- LinkedIn URLs belong in personal_info.linkedin.
+- GitHub URLs belong in personal_info.github.
+- Project URLs belong in the corresponding project's links.
+- Never invent URLs.
+
+FINAL EXTRACTION CHECK:
+
+Before returning the result, review the entire CV again.
+
+Verify that:
+1. Every skill from the Skills section is in all_skills.
+2. Technologies from every project are extracted.
+3. Technical topics from training descriptions are extracted.
+4. Skills from experience responsibilities are included.
+5. No explicitly mentioned technical skill was overlooked.
+6. No unsupported skill was added.
+7. All information is placed in the correct schema field.
+
+Return only data that conforms to CVSchema.
 """
 
     structured_llm = llm.with_structured_output(CVSchema)
 
     response = structured_llm.invoke([
         SystemMessage(content=system_prompt),
-        HumanMessage(content="Extract the main information from this CV:\n\n" + cv_text)
+        HumanMessage(
+            content=(
+                "Extract all relevant information from this CV. "
+                "Review every section carefully, especially all skills "
+                "and project technologies:\n\n"
+                + cv_text
+            )
+        )
     ])
 
     return response.model_dump()
